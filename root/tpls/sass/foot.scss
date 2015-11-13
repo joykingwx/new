@@ -1,0 +1,11 @@
+@charset "utf-8";
+//脚部内容
+.footer{
+  background:$footBg;
+  .tree{
+    background:$phont;
+    span{
+      font-size:$titleSize;
+    }
+  }
+}

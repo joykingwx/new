@@ -1,0 +1,21 @@
+{
+  "name": "manageMoney",
+  "version": "0.0.0",
+  "authors": [
+    "joykingwx <279194925@qq.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5shiv": "~3.7.3",
+    "jquery": "~2.1.4",
+    "respond": "~1.4.2"
+  }
+}
