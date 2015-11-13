@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+*
+* @param {Number} $constraint
+* @return {Number}
+*/
+@mixin shadow($constraint:outset,$sizeOut,$distanceOut,$colorOut,$sizeIn:null,$distanceIn:null,$colorIn:null){
+   @if($constraint==outset){
+     -webkit-box-shadow:$sizeOut $sizeOut $distanceOut $colorOut;
+     -moz-box-shadow:$sizeOut $sizeOut $distanceOut $colorOut;
+     box-shadow:$sizeOut $sizeOut $distanceOut $colorOut;
+  }@else if($constraint==inset){
+     -webkit-box-shadow:inset $sizeOut $sizeOut $distanceOut $colorOut ;
+     -moz-box-shadow:inset $sizeOut $sizeOut $distanceOut $colorOut ;
+     box-shadow:inset $sizeOut $sizeOut $distanceOut $colorOut ;
+   }@else{
+     -webkit-box-shadow:$sizeOut $sizeOut $distanceOut $colorOut, inset $sizeOut $sizeOut $distanceOut $colorOut;
+     -moz-box-shadow:$sizeOut $sizeOut $distanceOut $colorOut, inset $sizeOut $sizeOut $distanceOut $colorOut;
+     box-shadow:$sizeOut $sizeOut $distanceOut $colorOut, inset $sizeOut $sizeOut $distanceOut $colorOut;
+   }
+}

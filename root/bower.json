@@ -16,6 +16,8 @@
   "dependencies": {
     "html5shiv": "~3.7.3",
     "jquery": "~2.1.4",
-    "respond": "~1.4.2"
+    "respond": "~1.4.2",
+    "font-awesome": "Font-Awesome#~4.4.0",
+    "art-template": "~3.0.1"
   }
 }

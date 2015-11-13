@@ -22,7 +22,7 @@ exports.template = function(grunt, init, done) {
      init.prompt('version'),
      init.prompt('description'),
      init.prompt('main','index.js'),
-     init.prompt('author'),
+     init.prompt('author',"Don't leave the name"),
      init.prompt('license','SIC'),
     // Prompt for these values.
     {
@@ -77,7 +77,7 @@ exports.template = function(grunt, init, done) {
              description: props.description,
              main: props.main,
              scripts:{
-                    test: grunt qunit
+                    test: "grunt default"
                   },
              author: props.author,
              license: props.license,

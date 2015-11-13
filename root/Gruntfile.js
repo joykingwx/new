@@ -31,7 +31,7 @@ module.exports = function(grunt){
             },
             dist: {
                 files: {
-                    'dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+                    'dist/js/<%= pkg.name %>.js': ['<%= concat.dist.dest %>']
                 }
             }
         },
@@ -42,7 +42,7 @@ module.exports = function(grunt){
             },
             compress: {
                 files: {
-                    'dist/css/<%= pkg.name %>.min.css': [
+                    'dist/css/<%= pkg.name %>.css': [
                         "src/css/**/*.css"
                     ]
                 }
@@ -65,7 +65,7 @@ module.exports = function(grunt){
             },
             main:{
                 files: [
-                    {expand: true,cwd: 'src/', src: ['**','!libs/**','!js/**','!css/**'], dest: 'dist/'}
+                    {expand: true,cwd: 'src/', src: ['**','!js/**','!css/**'], dest: 'dist/'}
                 ]
             }
         },

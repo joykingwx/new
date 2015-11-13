@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@mixin transition($val: 1s){
+  -webkit-transition: all $val;
+  -moz-transition: all $val;
+  -ms-transition: all $val;
+  -o-transition: all $val;
+  transition: all $val;
+}

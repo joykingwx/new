@@ -1,0 +1,46 @@
+html,body,div{
+  font-family: $fontFamily;
+  font-size: $normSize;
+  color:$fontColorDefault;
+}
+html{
+  width:100%;
+  height:100%;
+}
+body{
+  height:100%;
+  margin:0;
+}
+div{
+  @include boxsizing();
+}
+h1,h2,h3,h4,h5,h6{
+  display:inline;
+  font-size:inherit;
+  margin:0;
+}
+ul,dd,dl,p{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration: none;
+  color:$fontColorDefault;
+}
+input[type="text"],button,select,textarea{
+  @include boxsizing();
+  outline:none;
+  border:1px solid $borderColor;
+  height:26px;
+  padding:0 5px;
+  font-family: $fontFamily;
+  font-size: $hintSize;
+  color:$fontColorDefault;
+}
+button{
+  cursor:pointer;
+}
+textarea{resize:none}
+
+
+

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+// box-sizing mixin function
+@mixin boxsizing($val:border-box){
+  -webkit-box-sizing: $val;
+  -moz-box-sizing: $val;
+  box-sizing: $val;
+}

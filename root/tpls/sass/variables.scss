@@ -1,10 +1,39 @@
 @charset "utf-8";
-//*变量文件
+
+
+//变量文件
+
+//字体
+$fontFamily: "微软雅黑";
+
+//字体大小
 $titleSize: 20px;
 $normSize: 16px;
-$hintSize: 12px;
+$hintSize: 14px;
+//字体颜色
+$fontColorDefault: #333;
+$fontColor:#666;
+$fontColorTitle: #000;
+$fontColorHover: #E9C801;
+$fontColorHint: #aaa;
+$navFontColor:#50381E;
+
+//背景颜色
+$bodyBg: #FAFAFA;
+$headBg: #333;
+$contentBg: #FAFAFA;
+$footBg: #2B2B2B;
+$modelTitleBg: #D4B565;
+$liksBg: #15456F;
+//间距
+$spaceHint:5px;
+$spaceDefault: 10px;
+$spaceBlock: 15px;
 
 
-$headBg: green;
-$contentBg: blue;
-$footBg: yellow;
+//边框颜色
+$borderColor: #aaa;
+$borderColorLayout: #e7eaec;
+
+//阴影颜色
+$shadowColor:#aaa;
