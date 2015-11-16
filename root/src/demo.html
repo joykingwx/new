@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>理财常识首页</title>
+    <title>{%= title || name %}</title>
+    <link rel="stylesheet" href="css/{%= title || name %}.css">
 
 
 
@@ -13,6 +14,8 @@
     <script src="libs/html5shiv/dist/html5shiv-printshiv.min.js"></script>
     <script src="libs/respond/dest/respond.min.js"></script>
     <![endif]-->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="js/{%= title || name %}.js"></script>
 </head>
 <body>
 
