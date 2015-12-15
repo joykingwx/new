@@ -49,7 +49,6 @@ exports.template = function(grunt, init, done) {
     props.test_task = props.dom ? 'qunit' : 'nodeunit';
     props.file_name = props.package_json ? '<%= pkg.name %>' : 'FILE_NAME';
 
-
       function prefer(arr, preferred) {
         for (var i = 0; i < preferred.length; i++) {
           if (arr.indexOf(preferred[i]) !== -1) {
@@ -77,7 +76,7 @@ exports.template = function(grunt, init, done) {
              description: props.description,
              main: props.main,
              scripts:{
-                    test: "grunt default"
+                    test: "bower install"
                   },
              author: props.author,
              license: props.license,
@@ -88,7 +87,6 @@ exports.template = function(grunt, init, done) {
                   "grunt-contrib-copy": "^0.8.2",
                   "grunt-contrib-cssmin": "^0.14.0",
                   "grunt-contrib-jshint": "~0.10.0",
-                  "grunt-contrib-nodeunit": "~0.4.1",
                   "grunt-contrib-qunit": "~0.5.2",
                   "grunt-contrib-sass": "^0.9.2",
                   "grunt-contrib-uglify": "~0.5.0",
@@ -96,7 +94,6 @@ exports.template = function(grunt, init, done) {
                   }
           });
     }
-
     // All done!
     done();
   });
