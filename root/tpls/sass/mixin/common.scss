@@ -1,4 +1,6 @@
 @charset "UTF-8";
+$spaceDefault: 10px;
+$spaceBlock: 15px;
 @include mediaQuery($min,768px){
   .row{
     margin-left:-$spaceDefault;
@@ -77,32 +79,4 @@
 }
 .lh-default{
   line-height: 160%;
-}
-
-
-
-
-
-
-
-
-.weixin-ioc{
-  background:$weixinIoc;
-}
-.sina-ioc{
-  background:$sinaIoc;
-}
-.weibo-ioc{
-  background: $weiboIoc;
-}
-.ioc{
-  display:inline-block;
-}
-
-
-.border{
-  border:1px solid $borderColorLayout;
-}
-.list-none{
-  list-style: none;
 }

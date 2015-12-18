@@ -1,15 +1,15 @@
 @charset "UTF-8";
+$progressBorder:#333;
 
 progress {
   width: 100%;
   height:20px;
-  border: 1px solid $headBg;
+  border: 1px solid $progressBorder;
   background-color:#fff;
   color: $headBg; /*IE10*/
 }
-
-progress::-moz-progress-bar { background: $headBg; }
+progress::-moz-progress-bar { background: $progressBorder; }
 progress::-webkit-progress-bar { background: #fff; }
-progress::-webkit-progress-value  { background: $headBg; }
+progress::-webkit-progress-value  { background: $progressBorder; }
 
 

@@ -3,7 +3,7 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON('package.json'),
         /*检测js文件*/
         jshint: {
-            files: ['Gruntfile.js', 'src/**/*.js'],
+            files: ['Gruntfile.js', 'src/js/*.js'],
             options: {
                 globals: {
                     jQuery: true
@@ -65,7 +65,7 @@ module.exports = function(grunt){
             },
             main:{
                 files: [
-                    {expand: true,cwd: 'src/', src: ['**','!js/**','!css/**'], dest: 'dist/'}
+                    {expand: true,cwd: 'src/', src: ['**','!js/**','!css/*.css'], dest: 'dist/'}
                 ]
             }
         },
@@ -88,8 +88,11 @@ module.exports = function(grunt){
             css:{
                 files: ['tpls/**'],
                 tasks: ['sass','copy:images','cssmin']
+            },
+            html:{
+                files: ['src/**/*.html'],
+                tasks: ['copy:main']
             }
-
         }
     });
 
@@ -103,7 +106,6 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['watch','concat']);
-    grunt.registerTask('clear',['clean:dist']);
-    grunt.registerTask('dist',['sass','copy:images','jshint','copy:main','concat','uglify','cssmin']);
+    grunt.registerTask('default', ['sass','copy:images','jshint','copy:main','concat','uglify','cssmin','watch']);
+    grunt.registerTask('dist',['clean:dist','sass','copy:images','jshint','copy:main','concat','uglify','cssmin']);
 };

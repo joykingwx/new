@@ -22,7 +22,7 @@ exports.template = function(grunt, init, done) {
      init.prompt('version'),
      init.prompt('description'),
      init.prompt('main','index.js'),
-     init.prompt('author',"Don't leave the name"),
+     init.prompt('author',"anonymity"),
      init.prompt('license','SIC'),
     // Prompt for these values.
     {
@@ -62,7 +62,6 @@ exports.template = function(grunt, init, done) {
     var dirs = grunt.file.expand({filter: 'isDirectory'}, '*').map(function(d) { return d.slice(0, -1); });
     props.lib_dir = prefer(dirs, ['lib', 'src']);
     props.test_dir = prefer(dirs, ['test', 'tests', 'unit', 'spec']);
-    props.jquery = grunt.file.expand({filter: 'isFile'}, '**/jquery*.js').length > 0;
     // 
     var files = init.filesToCopy(props);
     init.copyAndProcess(files, props);
@@ -76,21 +75,23 @@ exports.template = function(grunt, init, done) {
              description: props.description,
              main: props.main,
              scripts:{
-                    test: "bower install"
+                    "install": "bower install"
                   },
              author: props.author,
              license: props.license,
              devDependencies: {
-                  "grunt": "~0.4.5",
-                  "grunt-contrib-clean": "^0.6.0",
-                  "grunt-contrib-concat": "~0.4.0",
+                  "bower": "^1.7.1",
+                  "grunt": "^0.4.5",
+                  "grunt-cli": "^0.1.13",
+                  "grunt-contrib-clean": "^0.7.0",
+                  "grunt-contrib-concat": "^0.5.1",
                   "grunt-contrib-copy": "^0.8.2",
                   "grunt-contrib-cssmin": "^0.14.0",
-                  "grunt-contrib-jshint": "~0.10.0",
-                  "grunt-contrib-qunit": "~0.5.2",
+                  "grunt-contrib-jshint": "^0.11.3",
+                  "grunt-contrib-qunit": "^0.7.0",
                   "grunt-contrib-sass": "^0.9.2",
-                  "grunt-contrib-uglify": "~0.5.0",
-                  "grunt-contrib-watch": "~0.6.1"
+                  "grunt-contrib-uglify": "^0.11.0",
+                  "grunt-contrib-watch": "^0.6.1"
                   }
           });
     }

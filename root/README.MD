@@ -9,7 +9,9 @@
 # 安装项目扩展包
 
 ```
-npm install
+>npm install
+>npm install grunt-cli -g
+>grunt dist
 ```
 
 
