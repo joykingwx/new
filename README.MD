@@ -1,27 +1,35 @@
-# grunt-init-new
+自动生成一个前端新项目
+================
+  概述：项目包括compass、css压缩、js文件合并压缩功能
 
-> Create a basic Gruntfile with [grunt-init][].
-
-[grunt-init]: http://gruntjs.com/project-scaffolding
-
-## Installation
-If you haven't already done so, install [grunt-init][].
-
-Once grunt-init is installed, place this template in your `~/.grunt-init/` directory. It's recommended that you use git to clone this template into that directory, as follows:
-
-```
-git clone https://github.com/joykingwx/new.git ~/.grunt-init/new
-git clone https://github.com/joykingwx/new.git .grunt-init/new
-```
-
-_(Windows users, see [the documentation][grunt-init] for the correct destination directory path)_
-
-## Usage
-
-At the command-line, cd into an empty directory, run this command and follow the prompts.
-
+1 所需环境
+----------------
+  请先在电脑上安装[node](https://nodejs.org/en/download/)、[ruby](http://rubyinstaller.org/downloads／)，并通过代码安装[grunt-init](http://gruntjs.com/project-scaffolding)、[compass](http://compass-style.org/install/)如下：
+  ```
+  gem install compass -V
+  npm install -g grunt-init
+  ```
+2 下载模板文件
+----------------
+  a).通过[Git](http://git-scm.com/download)下载模板文件
+    ```
+    git clone https://github.com/joykingwx/new.git .grunt-init/new
+     ```
+  
+  b).手动下载然后将文件复制到计算机当前用户文件下“username/.grunt-init/new”
+  
+3 自动生成项目
+----------------
+命令行生成项目
 ```
 grunt-init new
 ```
-
-_Note that this template will generate files in the current directory, so be sure to change to a new directory first if you don't want to overwrite existing files._
+4.运行项目
+  a). 安装grunt扩展工具
+   ```
+   npm install
+    ```
+  b). 运行
+   ```
+   grunt
+    ```
