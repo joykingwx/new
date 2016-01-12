@@ -36,26 +36,26 @@ module.exports = function(grunt){
             }
         },
         /*合并css文件*/
-        cssmin: {
-            options: {
-                keepSpecialComments: 0
-            },
-            compress: {
-                files: {
-                    'dist/css/<%= pkg.name %>.css': [
-                        "src/css/**/*.css"
-                    ]
-                }
-            }
-        },
+        // cssmin: {
+        //     options: {
+        //         keepSpecialComments: 0
+        //     },
+        //     compress: {
+        //         files: {
+        //             'dist/css/<%= pkg.name %>.css': [
+        //                 "src/css/**/*.css"
+        //             ]
+        //         }
+        //     }
+        // },
        /*编译sass文件*/
-        sass: {
+       /* sass: {
             dist: {
                 files: {
                     'src/css/<%= pkg.name %>.css': 'tpls/sass/style.scss'
                 }
             }
-        },
+        },*/
         /*拷贝文件*/
         copy: {
             images:{
@@ -85,13 +85,25 @@ module.exports = function(grunt){
                 files: ['<%= jshint.files %>'],
                 tasks: ['jshint','concat']
             },
-            css:{
-                files: ['tpls/**'],
-                tasks: ['sass','copy:images','cssmin']
-            },
             html:{
-                files: ['src/**/*.html'],
-                tasks: ['copy:main']
+                files: ['src/*.html'],
+                 options: {
+                    livereload: true
+                }
+            },
+            sass:{
+                files:['sass/**/*.{scss,sass}','sass/_partials/**/*.{scss,sass}'],
+                tasks:['compass:dist'],
+                options: {
+                    livereload: true
+                }
+            }
+        },
+        compass:{
+            dist: {
+                options: {
+                    config: 'config.rb'
+                }
             }
         }
     });
@@ -99,13 +111,14 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    //grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    //grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-compass');
 
-    grunt.registerTask('default', ['sass','copy:images','jshint','copy:main','concat','uglify','cssmin','watch']);
-    grunt.registerTask('dist',['clean:dist','sass','copy:images','jshint','copy:main','concat','uglify','cssmin']);
+    grunt.registerTask('default', ['compass','jshint','concat','uglify','watch','copy:main']);
+    grunt.registerTask('dist',['clean:dist','compass','jshint','copy:main','concat','uglify']);
 };

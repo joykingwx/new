@@ -1,0 +1,16 @@
+@charset "UTF-8";
+//==================================================
+//自动给贴片图片样式添加宽度与高度
+//==================================================
+$buy-sprite-dimensions: true;  //是否给样式添加宽度与高度
+//$buy-spacing: 100px;  //图片之间的间隙
+//$buy-layout: horizontal;  //水平排列
+//$buy-layout: vertical;  //纵向排列
+//$buy-layout: diagonal;  //对角排列
+$buy-layout: smart;  //智能排列
+
+
+@import "buy/*.png";
+@include all-buy-sprites;
+
+

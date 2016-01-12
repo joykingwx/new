@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+
+//==================================================
+//媒体查询，断点变量
+//==================================================
+$XS: 18em;   //288px
+$S: 20em;    //480px
+$SM: 43em;   //688px
+$M : 47em;   //粗略计算，当body字体为16px时，大概有750PX
+$ML: 57em;   //912px
+$L : 75em;   //粗略计算，当body字体为16px时，大概有1200PX
+$XL: 85em;   //1360px
+
+//==================================================
+//布局区块
+//==================================================
+$defined-box-type : border-box !default;
+
+//==================================================
+//颜色区块
+//==================================================
+$selectioncolor: #E94B89;  //文字选中颜色
+$skincolor : #00a0e9;
+$bottomcolor : #d58411;
+
+//==================================================
+//文字阴影
+//==================================================
+$default-text-shadow-color: darken($skincolor,50%);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 0;
+$default-text-shadow-h-offset: 0;
+
+//==================================================
+//圆角大小
+//==================================================
+$default-box-shadow-color: lighten($skincolor,10%);
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur: 8px;
+$default-box-shadow-spread: false;
+$default-box-shadow-inset: false;
+
+
+//==================================================
+//圆角大小
+//==================================================
+$default-border-radius: 5px;
+
+
+

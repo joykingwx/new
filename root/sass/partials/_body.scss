@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body{
+  font-size:2em;
+  letter-spacing:.1em;
+  line-height: 1.4;
+  font-family: "airstreamregular";
+  @include background(_linear_gradient(to right,$skincolor 0, #DE859B 50%,$skincolor 100%));
+  color:#fff;
+  .no-fontface & {
+    font-size: 1.05em;
+  }
+}

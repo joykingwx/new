@@ -1,0 +1,48 @@
+.float {
+  float:left;
+  width:50%;
+}
+.box {
+  @include clearfix;
+}
+.main-link {
+  @include button-links(lighten($skincolor,48%),lighten($skincolor,40%));
+}
+.main-link2 {
+  @include button-links(complement(lighten($skincolor,48%)),complement(lighten($skincolor,40%)));
+
+}
+.hover {
+  @include clearfix;
+  a{
+    padding: 1em 1.5em;
+    &:nth-child(1){
+      background-color: $skincolor;
+    }
+    &:nth-child(2){
+      background-color: shade($skincolor,20%);
+    }
+    &:nth-child(3){
+      background-color: tint($skincolor,20%);
+    }
+    &:nth-child(4){
+      background-color: adjust_color($skincolor,$red:225,$green:220);
+    }
+    &:nth-child(5){
+      background-color: mix($skincolor,$bottomcolor,40%);
+    }
+  }
+
+}
+
+.inner-footer{
+  margin:20px !important;
+  padding:20px;
+  word-break: break-all;
+  @include column-count(3);
+  @include column-rule(1px,solid,#333);
+  @include filter(drop-shadow(yellow 0 0 3px));
+
+
+}
+

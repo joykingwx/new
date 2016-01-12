@@ -1,0 +1,42 @@
+@mixin border-box($bs-type : $defined-box-type) {
+  -webkit-box-sizing: $bs-type;
+  -moz-box-sizing: $bs-type;
+  box-sizing: $bs-type;
+}
+
+@mixin button-links($button-base: darken($skincolor,10%),$button-hover: darken($skincolor,15%)) {
+  border: 1px solid darken($skincolor,16%);
+  padding: .3em .6em;
+  margin-left:.7em;
+  @include border-radius(8px);
+  @include text-shadow(0 1px 2px $skincolor);
+  color : lighten($skincolor,50%);
+  background-color: $button-base;
+  &:hover {
+    background-color: $button-hover;
+  }
+}
+
+@mixin MQ($cancas){
+  @if $cancas ==XS{
+    @media only screen and (min-width: $XS) and ( max-width: $S-1) {
+      @content;
+    }
+  }
+  @else if $cancas ==S{
+    @media only screen and (min-width: $S) and ( max-width: $M-1) {
+      @content;
+    }
+  }
+  @else if $cancas ==M{
+    @media only screen and (min-width: $M) and ( max-width: $L-1) {
+      @content;
+    }
+  }
+  @else if $cancas ==L{
+    @media only screen and (min-width: $L) and ( max-width: $XL-1) {
+      @content;
+    }
+  }
+}
+

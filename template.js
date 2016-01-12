@@ -80,18 +80,18 @@ exports.template = function(grunt, init, done) {
              author: props.author,
              license: props.license,
              devDependencies: {
-                  "bower": "^1.7.1",
-                  "grunt": "^0.4.5",
-                  "grunt-cli": "^0.1.13",
-                  "grunt-contrib-clean": "^0.7.0",
-                  "grunt-contrib-concat": "^0.5.1",
-                  "grunt-contrib-copy": "^0.8.2",
-                  "grunt-contrib-cssmin": "^0.14.0",
-                  "grunt-contrib-jshint": "^0.11.3",
-                  "grunt-contrib-qunit": "^0.7.0",
-                  "grunt-contrib-sass": "^0.9.2",
-                  "grunt-contrib-uglify": "^0.11.0",
-                  "grunt-contrib-watch": "^0.6.1"
+                      "bower": "^1.7.1",
+                      "connect-livereload": "^0.5.4",
+                      "grunt": "^0.4.5",     
+                      "grunt-contrib-clean": "^0.7.0",
+                      "grunt-contrib-compass": "^1.0.4",
+                      "grunt-contrib-concat": "^0.5.1",
+                      "grunt-contrib-copy": "^0.8.2",
+                      "grunt-contrib-cssmin": "^0.14.0",
+                      "grunt-contrib-jshint": "^0.11.3",
+                      "grunt-contrib-qunit": "^0.7.0",
+                      "grunt-contrib-uglify": "^0.11.0",
+                      "grunt-contrib-watch": "^0.6.1"
                   }
           });
     }
