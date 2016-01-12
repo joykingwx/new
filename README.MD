@@ -37,4 +37,5 @@ grunt-init new
  5.chrome自动刷新
  ----------------
  a). 安装chrome插件[LiveReload](https://chrome.google.com/webstore/detail/jnihajbhpnppcggbcgedagnkighmdlei?utm_source=chrome-app-launcher-info-dialog),需要翻墙
+ 
  b). 需要在本机服务器下运行，建议使用[webstorm](https://www.jetbrains.com/webstorm/)编辑器,自带服务器功能，可免费激活（百度）。
