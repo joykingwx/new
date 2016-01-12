@@ -28,8 +28,9 @@ grunt-init new
   a). 安装grunt扩展工具
    ```
    npm install
-    ```
+  ```
+    
   b). 运行
    ```
    grunt
-    ```
+  ```
