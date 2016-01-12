@@ -3,6 +3,6 @@
   "test/name_test.js": "test/{%= name %}_test.js",
   "test/name_test.html": "test/{%= name %}_test.html",
   "src/css/name.css": "src/css/{%= name %}.css",
-  "src/js/name.js": "src/js/{%= name %}.js"
-  "sass/styles.scss": "sass/{%= name %}.scss"
+  "src/js/name.js": "src/js/{%= name %}.js",
+  "sass/name.scss": "sass/{%= name %}.scss"
 }

@@ -8,6 +8,7 @@
   ```
   gem install compass -V
   npm install -g grunt-init
+  npm install -g grunt-cli
   ```
 2 下载模板文件
 ----------------
