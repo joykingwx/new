@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>swiper-demo</title>
+    <link rel="stylesheet" href="../src/css/futongdai.css">
+    <link rel="stylesheet" href="../src/libs/Swiper/dist/css/swiper.min.css">
+    <style>
+
+        .swiper-slide:nth-of-type(2n-1){
+            background:#00a0e9;
+        }
+        .swiper-slide:nth-of-type(2n){
+            background:#8A6343;
+        }
+        .swiper-container{
+            width:100%;
+            height:100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="swiper-container" >
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+    </div>
+
+    <!-- 如果需要分页器 -->
+    <!--<div class="swiper-pagination"></div>-->
+
+    <!-- 如果需要导航按钮 -->
+    <!--<div class="swiper-button-prev"></div>-->
+    <!--<div class="swiper-button-next"></div>-->
+
+    <!-- 如果需要滚动条 -->
+   <!-- <div class="swiper-scrollbar"></div>-->
+</div>
+
+<script src="../src/libs/Swiper/dist/js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',   //vertical
+        loop: false,    //是否循环
+        speed: 300     //动画时间
+        //autoplay: 1000  //自动播放时间
+
+        // 如果需要分页器
+        //pagination: '.swiper-pagination'
+
+        // 如果需要前进后退按钮
+        //nextButton: '.swiper-button-next',
+        //prevButton: '.swiper-button-prev',
+
+        // 如果需要滚动条
+        //scrollbar: '.swiper-scrollbar'
+    })
+</script>
+</body>
+</html>
